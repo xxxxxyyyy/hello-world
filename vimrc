@@ -38,15 +38,23 @@ let python_highlight_all=1
 let g:rehash256 = 1
 syntax on
 set nu
+set t_Co=256
+"gaoliang line
+
 "文件浏览插件快捷键
 map <C-e> :NERDTreeToggle<CR>
 "根据模式判断使用色调
 if has('gui_running')
 	 set background=dark
-	 colorscheme solarized
+	 colorscheme molokai
 else
-	 colorscheme zenburn
+	 colorscheme molokai
 endif
+
+"solarized
+"molokai
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 call togglebg#map("<F5>")
 set guifont=Monaco:h19
 "python
